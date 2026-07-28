@@ -22,7 +22,7 @@ export default function WorldChampionshipsPage() {
           <ol className="mx-auto flex max-w-3xl flex-col gap-10 border-l border-white/10 pl-8">
             {timeline.map((item) => (
               <li key={item.title} className="relative">
-                <span className="absolute -left-[calc(2rem+5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-green shadow-[0_0_12px_rgba(182,231,17,0.8)]" />
+                <span className="absolute -left-[calc(2rem+5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-green" />
                 <span className="text-xs font-bold uppercase tracking-wider text-purple-text">
                   {item.year}
                 </span>

@@ -26,18 +26,13 @@ export default function FeatureCards() {
             </Link>
           </div>
 
-          <div className="relative min-h-[200px] flex-1">
+          <div className="relative min-h-[240px] flex-1 border-t-4 border-ink/10 sm:border-l-4 sm:border-t-0">
             <Image
               src="/images/team-picture.webp"
               alt="Team 506 Pandara posing together at a competition"
               fill
               sizes="(min-width: 1024px) 400px, 100vw"
-              className="object-cover object-top"
-              style={{ filter: "saturate(0.95) contrast(1.05)" }}
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-green to-transparent sm:w-16"
+              className="object-cover object-center"
             />
           </div>
         </div>

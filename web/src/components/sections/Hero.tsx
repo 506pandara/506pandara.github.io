@@ -41,7 +41,7 @@ export default function Hero() {
             className="animate-float-slow pointer-events-none absolute -right-6 top-6 hidden h-36 w-36 lg:-right-10 lg:top-10 lg:block lg:h-44 lg:w-44"
           >
             <div
-              className="absolute inset-0 rotate-3 bg-purple shadow-[0_0_55px_rgba(207,63,206,0.5)]"
+              className="absolute inset-0 rotate-3 bg-purple shadow-[0_10px_28px_rgba(0,0,0,0.4)]"
               style={{ borderRadius: "42% 58% 65% 35% / 55% 45% 55% 45%" }}
             />
             <div
