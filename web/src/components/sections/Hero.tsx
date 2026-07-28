@@ -5,7 +5,7 @@ import { heroContent } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-bg">
+    <section id="home" className="bg-leaves relative overflow-hidden">
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 lg:grid-cols-[1.05fr_1fr]">
         <div className="relative z-10 flex flex-col justify-center gap-6 px-6 py-20 md:px-10 lg:px-14 lg:py-28">
           <div className="leading-[0.9]">
@@ -28,7 +28,7 @@ export default function Hero() {
 
           <Link
             href="/meet-the-team/"
-            className="chamfer-sm inline-flex w-fit items-center gap-2 bg-green py-3.5 pl-6 pr-9 text-sm font-bold uppercase tracking-wide text-cream transition-transform hover:scale-[1.03]"
+            className="chamfer-sm btn-green-gradient inline-flex w-fit items-center gap-2 py-3.5 pl-6 pr-9 text-sm font-bold uppercase tracking-wide text-cream shadow-[0_10px_24px_rgba(23,34,15,0.25)] transition-transform hover:scale-[1.03]"
           >
             {heroContent.cta}
             <ArrowRight size={18} strokeWidth={3} />

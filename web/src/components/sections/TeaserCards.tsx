@@ -6,7 +6,7 @@ const icons = { Trophy, Cog, BarChart3 };
 
 export default function TeaserCards() {
   return (
-    <section className="relative bg-bg px-6 pb-10 pt-20 md:px-10 lg:px-14">
+    <section className="bg-leaves relative px-6 pb-10 pt-20 md:px-10 lg:px-14">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-6 sm:grid-cols-3">
         {teaserCards.map((card) => {
           const Icon = icons[card.icon as keyof typeof icons];
@@ -14,7 +14,7 @@ export default function TeaserCards() {
           return (
             <div
               key={card.title}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border p-7 transition-transform duration-300 hover:-translate-y-1"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1"
               style={{
                 borderColor: "var(--border-purple)",
                 background:

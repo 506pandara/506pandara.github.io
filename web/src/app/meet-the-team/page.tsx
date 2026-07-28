@@ -27,12 +27,12 @@ export default function MeetTheTeamPage() {
           title="Meet The Team"
           subtitle="Get to know the students, mentors, and leaders behind 506 Pandara."
         />
-        <section className="bg-bg px-6 pb-20 md:px-10 lg:px-14">
+        <section className="px-6 pb-20 md:px-10 lg:px-14">
           <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-5">
             {team.map((member) => (
               <div
                 key={member.name}
-                className={`flex flex-col items-center gap-3 rounded-2xl border border-ink/10 bg-bg-card p-6 text-center transition-colors hover:border-purple/50 ${
+                className={`flex flex-col items-center gap-3 rounded-2xl border border-ink/10 bg-bg-card shadow-[var(--shadow-card)] p-6 text-center transition-colors hover:border-purple/50 ${
                   member.placeholder ? "opacity-70" : ""
                 }`}
               >

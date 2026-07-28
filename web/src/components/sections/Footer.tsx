@@ -6,6 +6,7 @@ import {
   YoutubeIcon,
   FacebookIcon,
 } from "@/components/ui/SocialIcons";
+import LeafIcon from "@/components/ui/LeafIcon";
 import {
   footerNav,
   footerTagline,
@@ -24,7 +25,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="relative overflow-hidden border-t border-ink/10 bg-bg"
+      className="bg-leaves relative overflow-hidden border-t border-ink/10"
     >
       <div
         aria-hidden="true"
@@ -81,7 +82,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display text-lg text-purple">Quick Links</h3>
+            <h3 className="flex items-center gap-2 font-display text-lg text-purple">
+              <LeafIcon className="h-4 w-4 text-green" />
+              Quick Links
+            </h3>
             <ul className="mt-4 flex flex-col gap-2.5">
               {footerNav.map((link) => (
                 <li key={link.href}>
@@ -97,7 +101,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display text-lg text-purple">Contact Us</h3>
+            <h3 className="flex items-center gap-2 font-display text-lg text-purple">
+              <LeafIcon className="h-4 w-4 text-green" />
+              Contact Us
+            </h3>
             <ul className="mt-4 flex flex-col gap-3 text-sm text-text-secondary">
               <li className="flex items-center gap-2.5">
                 <Mail size={15} className="flex-none text-green" />

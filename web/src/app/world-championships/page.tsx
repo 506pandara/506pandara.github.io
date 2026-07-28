@@ -18,7 +18,7 @@ export default function WorldChampionshipsPage() {
           title="World Championships"
           subtitle="Our journey to the world's biggest stage."
         />
-        <section className="bg-bg px-6 pb-20 md:px-10 lg:px-14">
+        <section className="px-6 pb-20 md:px-10 lg:px-14">
           <ol className="mx-auto flex max-w-3xl flex-col gap-10 border-l border-ink/10 pl-8">
             {timeline.map((item) => (
               <li key={item.title} className="relative">

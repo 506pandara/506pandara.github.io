@@ -10,8 +10,9 @@
   --purple-deep: #efe3f8;
   --purple-text: #6a0dad;
 
-  --green: #4c7a2a;
-  --green-deep: #375c1d;
+  --green: #375c1d;
+  --green-deep: #24400f;
+  --green-light: #b9d194;
 
   --lavender: #efe3f8;
 
@@ -36,6 +37,7 @@
   --color-purple-text: var(--purple-text);
   --color-green: var(--green);
   --color-green-deep: var(--green-deep);
+  --color-green-light: var(--green-light);
   --color-lavender: var(--lavender);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
@@ -50,7 +52,7 @@
   --font-brush: var(--font-bangers);
   --font-body: var(--font-inter);
 
-  --shadow-card: 0 10px 24px rgba(23, 34, 15, 0.1);
+  --shadow-card: 0 14px 32px rgba(23, 34, 15, 0.14);
 }
 
 * {
@@ -76,7 +78,12 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background:
+    radial-gradient(70% 55% at 12% 0%, var(--green-light) 0%, transparent 60%),
+    radial-gradient(60% 50% at 100% 18%, var(--purple-deep) 0%, transparent 55%),
+    radial-gradient(80% 60% at 50% 100%, var(--green-light) 0%, transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
 }
@@ -137,7 +144,17 @@ body {
 
 /* Bamboo stalk pattern, tiled vertically for the side rails */
 .bamboo-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='260' viewBox='0 0 96 260'%3E%3Cg fill='%234c7a2a'%3E%3Crect x='28' y='0' width='16' height='260' rx='8'/%3E%3Crect x='60' y='0' width='16' height='260' rx='8'/%3E%3C/g%3E%3Cg fill='%23375c1d'%3E%3Crect x='24' y='42' width='24' height='6' rx='3'/%3E%3Crect x='24' y='128' width='24' height='6' rx='3'/%3E%3Crect x='24' y='214' width='24' height='6' rx='3'/%3E%3Crect x='56' y='10' width='24' height='6' rx='3'/%3E%3Crect x='56' y='96' width='24' height='6' rx='3'/%3E%3Crect x='56' y='182' width='24' height='6' rx='3'/%3E%3C/g%3E%3Cg fill='%234c7a2a' opacity='0.75'%3E%3Cpath d='M44 60 C64 54 78 42 84 26 C76 40 60 48 44 60Z'/%3E%3Cpath d='M80 104 C100 98 114 86 120 70 C112 84 96 92 80 104Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='260' viewBox='0 0 96 260'%3E%3Cg fill='%23375c1d'%3E%3Crect x='28' y='0' width='16' height='260' rx='8'/%3E%3Crect x='60' y='0' width='16' height='260' rx='8'/%3E%3C/g%3E%3Cg fill='%2324400f'%3E%3Crect x='24' y='42' width='24' height='6' rx='3'/%3E%3Crect x='24' y='128' width='24' height='6' rx='3'/%3E%3Crect x='24' y='214' width='24' height='6' rx='3'/%3E%3Crect x='56' y='10' width='24' height='6' rx='3'/%3E%3Crect x='56' y='96' width='24' height='6' rx='3'/%3E%3Crect x='56' y='182' width='24' height='6' rx='3'/%3E%3C/g%3E%3Cg fill='%23375c1d' opacity='0.75'%3E%3Cpath d='M44 60 C64 54 78 42 84 26 C76 40 60 48 44 60Z'/%3E%3Cpath d='M80 104 C100 98 114 86 120 70 C112 84 96 92 80 104Z'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 96px 260px;
   background-repeat: repeat-y;
+}
+
+/* Faint scattered bamboo-leaf texture for section backgrounds */
+.bg-leaves {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='%23375c1d' fill-opacity='0.05'%3E%3Cpath d='M20 40c30-8 52-28 60-56-6 30-26 52-60 56Z'/%3E%3Cpath d='M150 20c26 4 48 22 56 48-14-22-34-38-56-48Z'/%3E%3Cpath d='M40 150c-10 28 2 56 26 72-20-20-30-46-26-72Z'/%3E%3Cpath d='M170 130c30 6 52 28 58 58-10-30-30-50-58-58Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 220px 220px;
+}
+
+.btn-green-gradient {
+  background-image: linear-gradient(135deg, var(--green) 0%, var(--green-deep) 100%);
 }

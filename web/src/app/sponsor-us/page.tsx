@@ -19,7 +19,7 @@ export default function SponsorUsPage() {
           title="Become A Sponsor"
           subtitle="Partner with us to inspire the next generation and fuel innovation."
         />
-        <section className="bg-bg px-6 pb-20 md:px-10 lg:px-14">
+        <section className="px-6 pb-20 md:px-10 lg:px-14">
           <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               {sponsorBenefits.map((benefit) => (
@@ -38,10 +38,10 @@ export default function SponsorUsPage() {
                 </div>
               ))}
             </div>
-            <div className="flex flex-col items-center gap-4 rounded-2xl border border-ink/10 bg-bg-card p-10 text-center">
+            <div className="flex flex-col items-center gap-4 rounded-2xl border border-ink/10 bg-bg-card p-10 text-center shadow-[var(--shadow-card)]">
               <a
                 href="/contact/"
-                className="chamfer-sm inline-flex items-center gap-2 bg-green px-10 py-4 text-sm font-bold uppercase tracking-wide text-cream transition-transform hover:scale-[1.03]"
+                className="chamfer-sm btn-green-gradient inline-flex items-center gap-2 px-10 py-4 text-sm font-bold uppercase tracking-wide text-cream shadow-[0_10px_24px_rgba(23,34,15,0.25)] transition-transform hover:scale-[1.03]"
               >
                 Become a Sponsor
               </a>
