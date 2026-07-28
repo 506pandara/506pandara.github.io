@@ -32,14 +32,14 @@ export default function MeetTheTeamPage() {
             {team.map((member) => (
               <div
                 key={member.name}
-                className={`flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-bg-card p-6 text-center transition-colors hover:border-purple/50 ${
+                className={`flex flex-col items-center gap-3 rounded-2xl border border-ink/10 bg-bg-card p-6 text-center transition-colors hover:border-purple/50 ${
                   member.placeholder ? "opacity-70" : ""
                 }`}
               >
                 <div
                   className={`flex h-16 w-16 items-center justify-center rounded-full font-display text-lg ${
                     member.placeholder
-                      ? "border border-dashed border-white/20 text-text-muted"
+                      ? "border border-dashed border-ink/20 text-text-muted"
                       : "bg-purple text-white"
                   }`}
                 >

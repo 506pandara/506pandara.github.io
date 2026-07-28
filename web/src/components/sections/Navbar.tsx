@@ -13,7 +13,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-bg">
+    <header className="sticky top-0 z-50 border-b border-ink/10 bg-bg">
       <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 md:px-10 lg:px-14">
         <Link href="/" className="flex items-center gap-2.5">
           <span className="relative h-11 w-11 flex-none">
@@ -30,7 +30,7 @@ export default function Navbar() {
             <span className="font-display text-2xl tracking-wide text-text-primary">
               506
             </span>
-            <span className="font-brush text-xl leading-none text-green text-stroke-ink -mt-1">
+            <span className="font-brush text-xl leading-none text-purple -mt-1">
               PANDARA
             </span>
           </span>
@@ -46,13 +46,13 @@ export default function Navbar() {
                 href={link.href}
                 className={`relative pb-1 text-[13px] font-bold uppercase tracking-wider transition-colors ${
                   isActive
-                    ? "text-green"
-                    : "text-text-primary hover:text-green"
+                    ? "text-purple"
+                    : "text-text-primary hover:text-purple"
                 }`}
               >
                 {link.label}
                 {isActive ? (
-                  <span className="absolute inset-x-0 -bottom-0.5 h-[2px] bg-green" />
+                  <span className="absolute inset-x-0 -bottom-0.5 h-[2px] bg-purple" />
                 ) : null}
               </Link>
             );
@@ -77,7 +77,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden border-t border-white/10 bg-bg lg:hidden"
+            className="overflow-hidden border-t border-ink/10 bg-bg lg:hidden"
           >
             <div className="flex flex-col gap-1 px-6 py-4">
               {navLinks.map((link) => (
@@ -85,7 +85,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-3 py-3 text-sm font-bold uppercase tracking-wider text-text-primary transition-colors hover:bg-bg-elevated hover:text-green"
+                  className="rounded-lg px-3 py-3 text-sm font-bold uppercase tracking-wider text-text-primary transition-colors hover:bg-purple-deep hover:text-purple"
                 >
                   {link.label}
                 </Link>

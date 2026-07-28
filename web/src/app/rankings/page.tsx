@@ -23,7 +23,7 @@ export default function RankingsPage() {
             {achievements.map((item) => (
               <div
                 key={item.label}
-                className="rounded-2xl border border-white/10 bg-bg-card p-7 transition-colors hover:border-purple/50"
+                className="rounded-2xl border border-ink/10 bg-bg-card p-7 transition-colors hover:border-purple/50"
               >
                 <span className="text-xs font-bold uppercase tracking-wider text-text-muted">
                   {item.label}

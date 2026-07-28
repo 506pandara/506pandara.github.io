@@ -24,7 +24,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="relative overflow-hidden border-t border-white/10 bg-bg"
+      className="relative overflow-hidden border-t border-ink/10 bg-bg"
     >
       <div
         aria-hidden="true"
@@ -36,7 +36,7 @@ export default function Footer() {
           fill
           sizes="384px"
           className="object-contain"
-          style={{ filter: "grayscale(1) sepia(1) hue-rotate(230deg) saturate(4)" }}
+          style={{ filter: "grayscale(1)" }}
         />
       </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
                 <span className="font-display text-2xl text-text-primary">
                   506
                 </span>
-                <span className="font-brush text-xl leading-none text-green text-stroke-ink -mt-1">
+                <span className="font-brush text-xl leading-none text-purple -mt-1">
                   PANDARA
                 </span>
               </span>
@@ -71,7 +71,7 @@ export default function Footer() {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-green text-ink transition-transform hover:scale-110"
+                    className="flex h-9 w-9 items-center justify-center rounded-full bg-green text-cream transition-transform hover:scale-110"
                   >
                     <Icon size={16} strokeWidth={2.5} />
                   </a>
@@ -81,13 +81,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display text-lg text-green">Quick Links</h3>
+            <h3 className="font-display text-lg text-purple">Quick Links</h3>
             <ul className="mt-4 flex flex-col gap-2.5">
               {footerNav.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-text-secondary transition-colors hover:text-green"
+                    className="text-sm text-text-secondary transition-colors hover:text-purple"
                   >
                     {link.label}
                   </Link>
@@ -97,7 +97,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display text-lg text-green">Contact Us</h3>
+            <h3 className="font-display text-lg text-purple">Contact Us</h3>
             <ul className="mt-4 flex flex-col gap-3 text-sm text-text-secondary">
               <li className="flex items-center gap-2.5">
                 <Mail size={15} className="flex-none text-green" />
@@ -115,7 +115,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 border-t border-white/10 pt-6 text-center text-xs text-text-muted">
+        <div className="mt-14 border-t border-ink/10 pt-6 text-center text-xs text-text-muted">
           © 2026 506 Pandara. All Rights Reserved.
         </div>
       </div>

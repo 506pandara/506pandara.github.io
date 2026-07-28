@@ -20,7 +20,7 @@ export default function ContactPage() {
           subtitle="Questions about Team 506, sponsorship, or mentorship? We'd love to hear from you."
         />
         <section className="bg-bg px-6 pb-20 md:px-10 lg:px-14">
-          <div className="mx-auto flex max-w-2xl flex-col gap-5 rounded-2xl border border-white/10 bg-bg-card p-8">
+          <div className="mx-auto flex max-w-2xl flex-col gap-5 rounded-2xl border border-ink/10 bg-bg-card p-8">
             <div className="flex items-center gap-3 text-text-secondary">
               <Mail size={18} className="text-green" />
               {footerContact.email}

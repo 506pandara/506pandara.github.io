@@ -8,7 +8,7 @@ export default function PageHero({
   subtitle?: string;
 }) {
   return (
-    <section className="bg-hex relative bg-bg px-6 py-20 md:px-10 lg:px-14">
+    <section className="relative bg-bg px-6 py-20 md:px-10 lg:px-14">
       <div className="mx-auto max-w-[1400px]">
         <span className="text-xs font-bold uppercase tracking-[0.2em] text-purple-text">
           {eyebrow}

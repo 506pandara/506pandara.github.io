@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0d0a08;
-  --bg-elevated: #17100f;
-  --bg-card: #160f12;
+  --bg: #e7f0d8;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
 
-  --purple: #8f3d8c;
-  --purple-deep: #3d1a38;
-  --purple-text: #7a3f78;
+  --purple: #6a0dad;
+  --purple-dark: #4a0a78;
+  --purple-deep: #efe3f8;
+  --purple-text: #6a0dad;
 
-  --green: #9cb52e;
-  --green-deep: #62691a;
+  --green: #4c7a2a;
+  --green-deep: #375c1d;
 
-  --lavender: #e8d6cc;
+  --lavender: #efe3f8;
 
-  --text-primary: #f8f0e6;
-  --text-secondary: #d6c9bf;
-  --text-muted: #a89a8f;
-  --ink: #1a1109;
+  --text-primary: #212f1a;
+  --text-secondary: #47543c;
+  --text-muted: #78846c;
+  --ink: #17220f;
+  --cream: #fbf8f0;
 
-  --border-purple: rgba(143, 61, 140, 0.45);
-  --border-green: rgba(156, 181, 46, 0.55);
+  --border-purple: rgba(106, 13, 173, 0.35);
+  --border-green: rgba(76, 122, 42, 0.4);
+  --border-ink: rgba(23, 34, 15, 0.12);
 }
 
 @theme inline {
@@ -28,6 +31,7 @@
   --color-bg-elevated: var(--bg-elevated);
   --color-bg-card: var(--bg-card);
   --color-purple: var(--purple);
+  --color-purple-dark: var(--purple-dark);
   --color-purple-deep: var(--purple-deep);
   --color-purple-text: var(--purple-text);
   --color-green: var(--green);
@@ -37,14 +41,16 @@
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
   --color-ink: var(--ink);
+  --color-cream: var(--cream);
   --color-border-purple: var(--border-purple);
   --color-border-green: var(--border-green);
+  --color-border-ink: var(--border-ink);
 
   --font-display: var(--font-anton);
   --font-brush: var(--font-bangers);
   --font-body: var(--font-inter);
 
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 10px 24px rgba(23, 34, 15, 0.1);
 }
 
 * {
@@ -81,28 +87,13 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--purple);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
 .text-balance {
   text-wrap: balance;
-}
-
-.text-stroke-ink {
-  text-shadow:
-    -1px 1px 0 var(--ink),
-    1px 1px 0 var(--ink),
-    2px 2px 0 var(--ink),
-    3px 3px 0 var(--ink);
-}
-
-/* Hexagon outline pattern, used as a faint decorative background */
-.bg-hex {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='96' viewBox='0 0 84 96'%3E%3Cpath d='M42 0 L84 24 L84 72 L42 96 L0 72 L0 24 Z' fill='none' stroke='%23f8f0e6' stroke-opacity='0.05' stroke-width='1.5'/%3E%3C/svg%3E");
-  background-size: 84px 96px;
-  mask-image: linear-gradient(to bottom, black, transparent 85%);
 }
 
 /* Diagonal chamfer on top-right and bottom-left corners */
@@ -142,4 +133,11 @@ body {
 
 .animate-float-slow {
   animation: float-slow 6s ease-in-out infinite;
+}
+
+/* Bamboo stalk pattern, tiled vertically for the side rails */
+.bamboo-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='260' viewBox='0 0 96 260'%3E%3Cg fill='%234c7a2a'%3E%3Crect x='28' y='0' width='16' height='260' rx='8'/%3E%3Crect x='60' y='0' width='16' height='260' rx='8'/%3E%3C/g%3E%3Cg fill='%23375c1d'%3E%3Crect x='24' y='42' width='24' height='6' rx='3'/%3E%3Crect x='24' y='128' width='24' height='6' rx='3'/%3E%3Crect x='24' y='214' width='24' height='6' rx='3'/%3E%3Crect x='56' y='10' width='24' height='6' rx='3'/%3E%3Crect x='56' y='96' width='24' height='6' rx='3'/%3E%3Crect x='56' y='182' width='24' height='6' rx='3'/%3E%3C/g%3E%3Cg fill='%234c7a2a' opacity='0.75'%3E%3Cpath d='M44 60 C64 54 78 42 84 26 C76 40 60 48 44 60Z'/%3E%3Cpath d='M80 104 C100 98 114 86 120 70 C112 84 96 92 80 104Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 96px 260px;
+  background-repeat: repeat-y;
 }

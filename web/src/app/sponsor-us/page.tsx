@@ -38,10 +38,10 @@ export default function SponsorUsPage() {
                 </div>
               ))}
             </div>
-            <div className="flex flex-col items-center gap-4 rounded-2xl border border-white/10 bg-bg-card p-10 text-center">
+            <div className="flex flex-col items-center gap-4 rounded-2xl border border-ink/10 bg-bg-card p-10 text-center">
               <a
                 href="/contact/"
-                className="chamfer-sm inline-flex items-center gap-2 bg-green px-10 py-4 text-sm font-bold uppercase tracking-wide text-ink transition-transform hover:scale-[1.03]"
+                className="chamfer-sm inline-flex items-center gap-2 bg-green px-10 py-4 text-sm font-bold uppercase tracking-wide text-cream transition-transform hover:scale-[1.03]"
               >
                 Become a Sponsor
               </a>

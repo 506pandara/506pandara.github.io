@@ -19,7 +19,7 @@ export default function WorldChampionshipsPage() {
           subtitle="Our journey to the world's biggest stage."
         />
         <section className="bg-bg px-6 pb-20 md:px-10 lg:px-14">
-          <ol className="mx-auto flex max-w-3xl flex-col gap-10 border-l border-white/10 pl-8">
+          <ol className="mx-auto flex max-w-3xl flex-col gap-10 border-l border-ink/10 pl-8">
             {timeline.map((item) => (
               <li key={item.title} className="relative">
                 <span className="absolute -left-[calc(2rem+5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-green" />

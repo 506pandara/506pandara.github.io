@@ -27,7 +27,7 @@ export default function TeaserCards() {
                 strokeWidth={1}
               />
               <Icon className="relative h-9 w-9 text-green" strokeWidth={2} />
-              <h3 className="relative mt-4 font-display text-2xl leading-tight text-green">
+              <h3 className="relative mt-4 font-display text-2xl leading-tight text-purple">
                 {card.title}
               </h3>
               <p className="relative mb-6 mt-3 text-sm text-text-secondary">
@@ -38,7 +38,7 @@ export default function TeaserCards() {
                 className={`relative mt-auto inline-block w-fit rounded-full border px-6 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors ${
                   isPurple
                     ? "border-purple text-purple-text hover:bg-purple hover:text-white"
-                    : "border-green text-green hover:bg-green hover:text-ink"
+                    : "border-green text-green-deep hover:bg-green hover:text-cream"
                 }`}
               >
                 {card.button}
