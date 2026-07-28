@@ -7,9 +7,9 @@ export default function FeatureCards() {
   const { team, sponsor } = featureCards;
 
   return (
-    <section className="relative bg-bg px-6 pb-20 md:px-10 lg:px-14">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-6 lg:grid-cols-[3fr_2fr]">
-        <div className="chamfer relative min-h-[280px] overflow-hidden bg-green">
+    <section className="relative bg-bg px-6 pb-24 pt-10 md:px-10 lg:px-14">
+      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-8 lg:grid-cols-[3fr_2fr]">
+        <div className="chamfer relative min-h-[340px] overflow-hidden bg-green">
           <div className="duotone-green absolute inset-0">
             <Image
               src="/images/team-picture.webp"
@@ -19,7 +19,14 @@ export default function FeatureCards() {
               className="object-cover object-top"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-green via-green/85 to-transparent" />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to right, var(--green) 0%, var(--green) 22%, transparent 58%)",
+            }}
+          />
 
           <div className="relative flex h-full flex-col justify-center gap-4 p-8 sm:p-10">
             <Users className="h-8 w-8 text-ink" strokeWidth={2} />
@@ -38,13 +45,13 @@ export default function FeatureCards() {
           </div>
         </div>
 
-        <div className="chamfer relative min-h-[280px] overflow-hidden bg-lavender">
+        <div className="chamfer relative min-h-[340px] overflow-hidden bg-lavender">
           <div
             aria-hidden="true"
-            className="absolute inset-0 opacity-40"
+            className="absolute inset-0"
             style={{
               background:
-                "repeating-linear-gradient(115deg, transparent 0 18px, var(--purple) 18px 20px)",
+                "radial-gradient(120% 100% at 100% 0%, rgba(207,63,206,0.22), transparent 60%)",
             }}
           />
           <div className="relative flex h-full flex-col justify-center gap-4 p-8 sm:p-10">

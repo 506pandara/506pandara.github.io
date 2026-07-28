@@ -9,12 +9,12 @@ export default function Hero() {
       <div className="bg-hex absolute inset-0" />
 
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 lg:grid-cols-[1.05fr_1fr]">
-        <div className="relative z-10 flex flex-col justify-center gap-7 px-6 py-16 md:px-10 lg:px-14 lg:py-24">
-          <div className="leading-[0.85]">
-            <span className="-skew-x-6 block font-display text-7xl text-text-primary sm:text-8xl lg:text-[6.5rem]">
+        <div className="relative z-10 flex flex-col justify-center gap-6 px-6 py-20 md:px-10 lg:px-14 lg:py-28">
+          <div className="leading-[0.9]">
+            <span className="-skew-x-3 block font-display text-7xl text-text-primary sm:text-8xl lg:text-[6rem]">
               {heroContent.eyebrow}
             </span>
-            <span className="-skew-x-6 -mt-1 block font-brush text-5xl leading-none text-green text-stroke-ink sm:text-6xl lg:text-7xl">
+            <span className="-skew-x-3 -mt-1 block font-brush text-5xl leading-none text-green text-stroke-ink sm:text-6xl lg:text-[4.25rem]">
               {heroContent.wordmark}
             </span>
           </div>
@@ -37,7 +37,7 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="relative min-h-[320px] lg:min-h-[560px]">
+        <div className="relative min-h-[320px] lg:min-h-[600px]">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_100%_at_100%_50%,var(--purple-deep),var(--bg)_75%)]" />
           <Image
             src="/images/robot-picture.webp"
@@ -52,26 +52,26 @@ export default function Hero() {
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-[32%] top-1/2 hidden h-56 w-56 -translate-x-1/2 -translate-y-1/2 rotate-3 bg-purple shadow-[0_0_60px_rgba(191,59,234,0.5)] lg:block"
+        className="pointer-events-none absolute left-1/2 top-1/2 hidden h-44 w-44 -translate-x-1/2 -translate-y-1/2 rotate-2 bg-purple shadow-[0_0_50px_rgba(207,63,206,0.45)] lg:block"
         style={{ borderRadius: "42% 58% 65% 35% / 55% 45% 55% 45%" }}
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-[32%] top-1/2 hidden h-40 w-40 -translate-x-1/2 -translate-y-1/2 lg:block"
+        className="pointer-events-none absolute left-1/2 top-1/2 hidden h-24 w-24 -translate-x-1/2 -translate-y-1/2 rotate-[-18deg] lg:block"
+      >
+        <div className="absolute left-1/2 top-1/2 h-[380px] w-[2px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-transparent via-green/60 to-transparent" />
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 hidden h-32 w-32 -translate-x-1/2 -translate-y-1/2 lg:block"
       >
         <Image
           src="/images/pandara-logo.webp"
           alt=""
           fill
-          sizes="160px"
+          sizes="128px"
           className="object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)]"
         />
-      </div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-0 top-0 hidden h-full w-full rotate-[-18deg] lg:block"
-      >
-        <div className="absolute left-[38%] top-0 h-full w-[3px] bg-gradient-to-b from-transparent via-green/70 to-transparent" />
       </div>
     </section>
   );
