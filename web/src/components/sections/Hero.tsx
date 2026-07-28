@@ -1,79 +1,78 @@
 import Image from "next/image";
-import Button from "@/components/ui/Button";
-import Particles from "@/components/ui/Particles";
-import ScrollIndicator from "@/components/ui/ScrollIndicator";
-import Float from "@/components/motion/Float";
-import FadeUp from "@/components/motion/FadeUp";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { heroContent } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-24"
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_80%_at_50%_-10%,var(--bg-secondary),var(--bg-primary)_70%)]" />
-      <div className="absolute inset-0 bg-grid animate-grid-drift opacity-40" />
-      <div className="animate-blob-a absolute -left-40 -top-40 h-[560px] w-[560px] rounded-full bg-purple/30 blur-[140px]" />
-      <div className="animate-blob-b absolute -bottom-40 -right-40 h-[560px] w-[560px] rounded-full bg-green/20 blur-[140px]" />
-      <div className="absolute right-1/3 top-1/4 h-[320px] w-[320px] rounded-full bg-warm/10 blur-[120px]" />
-      <Particles />
+    <section id="home" className="relative overflow-hidden bg-bg">
+      <div className="bg-hex absolute inset-0" />
 
-      <div className="relative mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-16 px-6 md:px-12 lg:px-20 lg:grid-cols-2 lg:gap-12">
-        <FadeUp className="flex flex-col gap-8">
-          <span className="w-fit rounded-full border border-border-subtle bg-card px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-purple-bright">
-            FIRST Tech Challenge · Est. 2007
-          </span>
+      <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 lg:grid-cols-[1.05fr_1fr]">
+        <div className="relative z-10 flex flex-col justify-center gap-7 px-6 py-16 md:px-10 lg:px-14 lg:py-24">
+          <div className="leading-[0.85]">
+            <span className="-skew-x-6 block font-display text-7xl text-text-primary sm:text-8xl lg:text-[6.5rem]">
+              {heroContent.eyebrow}
+            </span>
+            <span className="-skew-x-6 -mt-1 block font-brush text-5xl leading-none text-green text-stroke-ink sm:text-6xl lg:text-7xl">
+              {heroContent.wordmark}
+            </span>
+          </div>
 
-          <h1 className="font-heading text-[42px] font-black leading-[0.98] tracking-tight md:text-[64px] lg:text-[96px]">
-            Building{" "}
-            <span className="bg-gradient-to-r from-purple to-purple-bright bg-clip-text text-transparent">
-              Robots.
+          <h1 className="font-display text-2xl leading-tight sm:text-3xl">
+            <span className="block text-text-primary">
+              {heroContent.tagline[0]}
             </span>
-            <br />
-            Building{" "}
-            <span className="bg-gradient-to-r from-purple to-purple-bright bg-clip-text text-transparent">
-              Leaders.
-            </span>
+            <span className="block text-green">{heroContent.tagline[1]}</span>
           </h1>
 
-          <p className="max-w-lg text-lg text-white/70">
-            Team 506 Pandara designs, builds, and programs competition robots
-            for the FIRST Tech Challenge — turning circuit boards and CAD
-            files into confident engineers, one season at a time.
-          </p>
+          <p className="max-w-md text-text-secondary">{heroContent.mission}</p>
 
-          <div className="flex flex-wrap items-center gap-4">
-            <Button href="#team" variant="primary">
-              Explore Our Team
-            </Button>
-            <Button href="#sponsors" variant="secondary">
-              Become a Sponsor
-            </Button>
-          </div>
-        </FadeUp>
+          <Link
+            href="/meet-the-team/"
+            className="chamfer-sm inline-flex w-fit items-center gap-2 bg-green py-3.5 pl-6 pr-9 text-sm font-bold uppercase tracking-wide text-ink transition-transform hover:scale-[1.03]"
+          >
+            {heroContent.cta}
+            <ArrowRight size={18} strokeWidth={3} />
+          </Link>
+        </div>
 
-        <FadeUp delay={0.15} className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <Float duration={6} distance={14}>
-            <div className="relative rounded-[var(--radius-image)] border border-border-subtle bg-card p-4 shadow-[var(--shadow-glow-purple)] backdrop-blur-xl sm:p-6">
-              <div className="absolute -top-3 left-6 rounded-full bg-bg-primary px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-purple-bright ring-1 ring-border-subtle">
-                Our Robot
-              </div>
-              <div className="relative aspect-square w-full overflow-hidden rounded-[calc(var(--radius-image)-12px)] bg-bg-secondary">
-                <Image
-                  src="/images/robot-picture.webp"
-                  alt="Team 506 Pandara's competition robot"
-                  fill
-                  sizes="(min-width: 1024px) 480px, 90vw"
-                  className="object-contain p-6"
-                  priority
-                />
-              </div>
-            </div>
-          </Float>
-        </FadeUp>
+        <div className="relative min-h-[320px] lg:min-h-[560px]">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_100%_at_100%_50%,var(--purple-deep),var(--bg)_75%)]" />
+          <Image
+            src="/images/robot-picture.webp"
+            alt="Team 506 Pandara's competition robot"
+            fill
+            sizes="(min-width: 1024px) 700px, 100vw"
+            className="object-contain p-8 sm:p-12 lg:p-16"
+            priority
+          />
+        </div>
       </div>
 
-      <ScrollIndicator />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[32%] top-1/2 hidden h-56 w-56 -translate-x-1/2 -translate-y-1/2 rotate-3 bg-purple shadow-[0_0_60px_rgba(191,59,234,0.5)] lg:block"
+        style={{ borderRadius: "42% 58% 65% 35% / 55% 45% 55% 45%" }}
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[32%] top-1/2 hidden h-40 w-40 -translate-x-1/2 -translate-y-1/2 lg:block"
+      >
+        <Image
+          src="/images/pandara-logo.webp"
+          alt=""
+          fill
+          sizes="160px"
+          className="object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)]"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-0 top-0 hidden h-full w-full rotate-[-18deg] lg:block"
+      >
+        <div className="absolute left-[38%] top-0 h-full w-[3px] bg-gradient-to-b from-transparent via-green/70 to-transparent" />
+      </div>
     </section>
   );
 }

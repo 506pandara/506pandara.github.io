@@ -1,11 +1,68 @@
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Robot", href: "#robot" },
-  { label: "Achievements", href: "#achievements" },
-  { label: "Team", href: "#team" },
-  { label: "Sponsors", href: "#sponsors" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Our Robot", href: "/our-robot/" },
+  { label: "World Championships", href: "/world-championships/" },
+  { label: "Rankings", href: "/rankings/" },
+  { label: "Meet The Team", href: "/meet-the-team/" },
+  { label: "Sponsor Us", href: "/sponsor-us/" },
+  { label: "Contact", href: "/contact/" },
 ];
+
+export const heroContent = {
+  eyebrow: "506",
+  wordmark: "PANDARA",
+  tagline: ["BUILDING TOMORROW,", "TOGETHER."],
+  mission:
+    "We are 506 Pandara, a passionate robotics team dedicated to innovation, teamwork, and making an impact on and off the field.",
+  cta: "Learn More About Us",
+};
+
+export const teaserCards = [
+  {
+    icon: "Trophy",
+    title: "World Championships",
+    description:
+      "Our journey to the world stage. Check back for updates on our next championship appearance!",
+    button: "Stay Tuned",
+    href: "/world-championships/",
+    accent: "purple",
+  },
+  {
+    icon: "Cog",
+    title: "Our Robot",
+    description: "Built with precision. Driven by purpose.",
+    button: "Explore the Bot",
+    href: "/our-robot/",
+    accent: "green",
+  },
+  {
+    icon: "BarChart3",
+    title: "Rankings",
+    description: "See how we stack up against the competition.",
+    button: "View Rankings",
+    href: "/rankings/",
+    accent: "purple",
+  },
+];
+
+export const featureCards = {
+  team: {
+    icon: "Users",
+    title: "Meet The Team",
+    description:
+      "Get to know the students, mentors, and leaders behind 506 Pandara.",
+    button: "Meet The Team",
+    href: "/meet-the-team/",
+  },
+  sponsor: {
+    icon: "Handshake",
+    title: "Become A Sponsor",
+    description:
+      "Partner with us to inspire the next generation and fuel innovation.",
+    button: "Sponsor Us",
+    href: "/sponsor-us/",
+  },
+};
 
 export const stats = [
   { label: "Years Competing", value: "19+" },
@@ -176,15 +233,22 @@ export const sponsorBenefits = [
 
 export const footerNav = navLinks;
 
+export const footerTagline = "Building tomorrow, together.";
+
 export const footerContact = {
-  school: "Palm Harbor University High School",
-  location: "Palm Harbor, Florida",
-  email: "Contact info coming soon",
+  email: "contact@506pandara.org",
+  location: "Clearwater, Florida",
+  program: "FIRST® Robotics Competition Team 506",
 };
 
-export const footerSocials = ["Instagram", "YouTube", "LinkedIn"];
+export const footerSocials = [
+  { label: "Instagram", icon: "Instagram", href: "#" },
+  { label: "YouTube", icon: "Youtube", href: "#" },
+  { label: "Facebook", icon: "Facebook", href: "#" },
+  { label: "Email", icon: "Mail", href: "mailto:contact@506pandara.org" },
+];
 
 export const footerSponsors = {
   note: "Sponsor logos coming soon.",
-  href: "#sponsors",
+  href: "/sponsor-us/",
 };

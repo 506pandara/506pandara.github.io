@@ -1,67 +1,63 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/data";
-import Button from "@/components/ui/Button";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const pathname = usePathname();
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
-        scrolled
-          ? "h-16 border-border-subtle bg-bg-primary/80 backdrop-blur-xl"
-          : "h-20 border-transparent bg-transparent"
-      }`}
-    >
-      <div className="mx-auto flex h-full max-w-[1400px] items-center justify-between px-6 md:px-12 lg:px-20">
-        <Link href="#home" className="flex items-center gap-3">
-          <span className="relative h-10 w-10 overflow-hidden rounded-full ring-1 ring-purple-bright/40">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-bg">
+      <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 md:px-10 lg:px-14">
+        <Link href="/" className="flex items-center gap-2.5">
+          <span className="relative h-11 w-11 flex-none">
             <Image
               src="/images/pandara-logo.webp"
               alt="Team 506 Pandara panda logo"
               fill
-              sizes="40px"
-              className="object-cover"
+              sizes="44px"
+              className="object-contain"
               priority
             />
           </span>
-          <span className="font-heading text-lg font-bold tracking-tight">
-            506 Pandara
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-2xl tracking-wide text-text-primary">
+              506
+            </span>
+            <span className="font-brush text-xl leading-none text-green text-stroke-ink -mt-1">
+              PANDARA
+            </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="group relative py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
-            >
-              {link.label}
-              <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-gradient-to-r from-purple to-purple-bright transition-transform duration-300 group-hover:scale-x-100" />
-            </Link>
-          ))}
+        <nav className="hidden items-center gap-7 lg:flex">
+          {navLinks.map((link) => {
+            const isActive =
+              link.href === "/" ? pathname === "/" : pathname?.startsWith(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative pb-1 text-[13px] font-bold uppercase tracking-wider transition-colors ${
+                  isActive
+                    ? "text-green"
+                    : "text-text-primary hover:text-green"
+                }`}
+              >
+                {link.label}
+                {isActive ? (
+                  <span className="absolute inset-x-0 -bottom-0.5 h-[2px] bg-green" />
+                ) : null}
+              </Link>
+            );
+          })}
         </nav>
-
-        <div className="hidden lg:block">
-          <Button href="#sponsors" variant="green" className="!px-6 !py-2.5 text-xs">
-            Become a Sponsor
-          </Button>
-        </div>
 
         <button
           type="button"
@@ -81,7 +77,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden border-t border-border-subtle bg-bg-primary/95 backdrop-blur-xl lg:hidden"
+            className="overflow-hidden border-t border-white/10 bg-bg lg:hidden"
           >
             <div className="flex flex-col gap-1 px-6 py-4">
               {navLinks.map((link) => (
@@ -89,16 +85,11 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-3 py-3 text-base font-medium text-text-secondary transition-colors hover:bg-card hover:text-text-primary"
+                  className="rounded-lg px-3 py-3 text-sm font-bold uppercase tracking-wider text-text-primary transition-colors hover:bg-bg-elevated hover:text-green"
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="mt-2">
-                <Button href="#sponsors" variant="green" className="w-full">
-                  Become a Sponsor
-                </Button>
-              </div>
             </div>
           </motion.nav>
         ) : null}
