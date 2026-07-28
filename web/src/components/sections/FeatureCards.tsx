@@ -9,26 +9,8 @@ export default function FeatureCards() {
   return (
     <section className="relative bg-bg px-6 pb-24 pt-10 md:px-10 lg:px-14">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-8 lg:grid-cols-[3fr_2fr]">
-        <div className="chamfer relative min-h-[340px] overflow-hidden bg-green">
-          <div className="duotone-green absolute inset-0">
-            <Image
-              src="/images/team-picture.webp"
-              alt="Team 506 Pandara posing together at a competition"
-              fill
-              sizes="(min-width: 1024px) 760px, 100vw"
-              className="object-cover object-top"
-            />
-          </div>
-          <div
-            aria-hidden="true"
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to right, var(--green) 0%, var(--green) 22%, transparent 58%)",
-            }}
-          />
-
-          <div className="relative flex h-full flex-col justify-center gap-4 p-8 sm:p-10">
+        <div className="chamfer relative flex min-h-[340px] flex-col overflow-hidden bg-green sm:flex-row">
+          <div className="relative z-10 flex flex-col justify-center gap-4 p-8 sm:w-[52%] sm:p-10">
             <Users className="h-8 w-8 text-ink" strokeWidth={2} />
             <h3 className="font-display text-3xl text-ink sm:text-4xl">
               {team.title}
@@ -42,6 +24,21 @@ export default function FeatureCards() {
             >
               {team.button}
             </Link>
+          </div>
+
+          <div className="relative min-h-[200px] flex-1">
+            <Image
+              src="/images/team-picture.webp"
+              alt="Team 506 Pandara posing together at a competition"
+              fill
+              sizes="(min-width: 1024px) 400px, 100vw"
+              className="object-cover object-top"
+              style={{ filter: "saturate(0.95) contrast(1.05)" }}
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-green to-transparent sm:w-16"
+            />
           </div>
         </div>
 

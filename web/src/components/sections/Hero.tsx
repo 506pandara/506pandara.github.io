@@ -35,6 +35,27 @@ export default function Hero() {
             {heroContent.cta}
             <ArrowRight size={18} strokeWidth={3} />
           </Link>
+
+          <div
+            aria-hidden="true"
+            className="animate-float-slow pointer-events-none absolute -right-6 top-6 hidden h-36 w-36 lg:-right-10 lg:top-10 lg:block lg:h-44 lg:w-44"
+          >
+            <div
+              className="absolute inset-0 rotate-3 bg-purple shadow-[0_0_55px_rgba(207,63,206,0.5)]"
+              style={{ borderRadius: "42% 58% 65% 35% / 55% 45% 55% 45%" }}
+            />
+            <div
+              className="absolute inset-2 -rotate-6 bg-purple-deep opacity-70"
+              style={{ borderRadius: "58% 42% 35% 65% / 45% 55% 45% 55%" }}
+            />
+            <Image
+              src="/images/pandara-logo.webp"
+              alt="Team 506 Pandara panda logo"
+              fill
+              sizes="176px"
+              className="relative object-contain p-5 drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)] [image-rendering:pixelated]"
+            />
+          </div>
         </div>
 
         <div className="relative min-h-[320px] lg:min-h-[600px]">
@@ -48,30 +69,6 @@ export default function Hero() {
             priority
           />
         </div>
-      </div>
-
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/2 hidden h-44 w-44 -translate-x-1/2 -translate-y-1/2 rotate-2 bg-purple shadow-[0_0_50px_rgba(207,63,206,0.45)] lg:block"
-        style={{ borderRadius: "42% 58% 65% 35% / 55% 45% 55% 45%" }}
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/2 hidden h-24 w-24 -translate-x-1/2 -translate-y-1/2 rotate-[-18deg] lg:block"
-      >
-        <div className="absolute left-1/2 top-1/2 h-[380px] w-[2px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-transparent via-green/60 to-transparent" />
-      </div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/2 hidden h-32 w-32 -translate-x-1/2 -translate-y-1/2 lg:block"
-      >
-        <Image
-          src="/images/pandara-logo.webp"
-          alt=""
-          fill
-          sizes="128px"
-          className="object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)]"
-        />
       </div>
     </section>
   );
