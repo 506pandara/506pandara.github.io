@@ -27,7 +27,7 @@ export default function OurRobotPage() {
                 alt="Team 506 Pandara's competition robot"
                 fill
                 sizes="(min-width: 1024px) 600px, 100vw"
-                className="object-contain p-8"
+                className="mix-blend-multiply object-contain p-8"
               />
             </div>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">

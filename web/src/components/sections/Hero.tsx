@@ -42,7 +42,7 @@ export default function Hero() {
             alt="Team 506 Pandara's competition robot"
             fill
             sizes="(min-width: 1024px) 700px, 100vw"
-            className="object-contain p-8 sm:p-12 lg:p-16"
+            className="mix-blend-multiply object-contain p-8 sm:p-12 lg:p-16"
             priority
           />
         </div>
