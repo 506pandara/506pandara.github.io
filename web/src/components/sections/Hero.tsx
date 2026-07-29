@@ -36,7 +36,6 @@ export default function Hero() {
         </div>
 
         <div className="relative min-h-[320px] lg:min-h-[600px]">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_100%_at_100%_50%,var(--purple-deep),var(--bg)_75%)]" />
           <Image
             src="/images/robot-picture.webp"
             alt="Team 506 Pandara's competition robot"
