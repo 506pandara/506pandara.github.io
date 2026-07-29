@@ -43,7 +43,7 @@ export default function FeatureCards() {
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(120% 100% at 100% 0%, rgba(106,13,173,0.15), transparent 60%)",
+                "radial-gradient(120% 100% at 100% 0%, rgba(110,40,184,0.15), transparent 60%)",
             }}
           />
           <div className="relative flex h-full flex-col justify-center gap-4 p-8 sm:p-10">
