@@ -20,7 +20,7 @@ export default function FeatureCards() {
             </p>
             <Link
               href={team.href}
-              className="mt-2 inline-block w-fit rounded-full border-2 border-cream px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-cream transition-colors hover:bg-cream hover:text-green-deep"
+              className="mt-2 inline-block w-fit rounded-full border-2 border-cream px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-cream transition-colors hover:bg-green-light hover:text-green-deep"
             >
               {team.button}
             </Link>

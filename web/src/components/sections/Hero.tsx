@@ -33,27 +33,6 @@ export default function Hero() {
             {heroContent.cta}
             <ArrowRight size={18} strokeWidth={3} />
           </Link>
-
-          <div
-            aria-hidden="true"
-            className="animate-float-slow pointer-events-none absolute -right-6 top-6 hidden h-36 w-36 lg:-right-10 lg:top-10 lg:block lg:h-44 lg:w-44"
-          >
-            <div
-              className="absolute inset-0 rotate-3 bg-purple shadow-[0_10px_28px_rgba(0,0,0,0.4)]"
-              style={{ borderRadius: "42% 58% 65% 35% / 55% 45% 55% 45%" }}
-            />
-            <div
-              className="absolute inset-2 -rotate-6 bg-purple-dark opacity-60"
-              style={{ borderRadius: "58% 42% 35% 65% / 45% 55% 45% 55%" }}
-            />
-            <Image
-              src="/images/pandara-logo.webp"
-              alt="Team 506 Pandara panda logo"
-              fill
-              sizes="176px"
-              className="relative object-contain p-5 drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)] [image-rendering:pixelated]"
-            />
-          </div>
         </div>
 
         <div className="relative min-h-[320px] lg:min-h-[600px]">

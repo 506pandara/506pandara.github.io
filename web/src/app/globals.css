@@ -2,11 +2,10 @@
 
 :root {
   --bg: #e7f0d8;
-  --bg-elevated: #ffffff;
-  --bg-card: #ffffff;
+  --bg-elevated: #f2f1de;
+  --bg-card: #f2f1de;
 
   --purple: #6a0dad;
-  --purple-dark: #4a0a78;
   --purple-deep: #efe3f8;
   --purple-text: #6a0dad;
 
@@ -32,7 +31,6 @@
   --color-bg-elevated: var(--bg-elevated);
   --color-bg-card: var(--bg-card);
   --color-purple: var(--purple);
-  --color-purple-dark: var(--purple-dark);
   --color-purple-deep: var(--purple-deep);
   --color-purple-text: var(--purple-text);
   --color-green: var(--green);
@@ -126,20 +124,6 @@ body {
     14px 100%,
     0 calc(100% - 14px)
   );
-}
-
-@keyframes float-slow {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-14px);
-  }
-}
-
-.animate-float-slow {
-  animation: float-slow 6s ease-in-out infinite;
 }
 
 /* Bamboo stalk pattern, tiled vertically for the side rails */
