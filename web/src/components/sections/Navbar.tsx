@@ -27,7 +27,7 @@ export default function Navbar() {
             />
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-display text-2xl tracking-wide text-text-primary">
+            <span className="font-display text-2xl tracking-wide text-purple">
               506
             </span>
             <span className="font-brush text-xl leading-none text-purple -mt-1">

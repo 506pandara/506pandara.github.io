@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 lg:grid-cols-[1.05fr_1fr]">
         <div className="relative z-10 flex flex-col justify-center gap-6 px-6 py-20 md:px-10 lg:px-14 lg:py-28">
           <div className="leading-[0.9]">
-            <span className="-skew-x-3 block font-display text-7xl text-text-primary sm:text-8xl lg:text-[6rem]">
+            <span className="-skew-x-3 block font-display text-7xl text-purple sm:text-8xl lg:text-[6rem]">
               {heroContent.eyebrow}
             </span>
             <span className="-skew-x-3 -mt-1 block font-brush text-5xl leading-none text-purple sm:text-6xl lg:text-[4.25rem]">

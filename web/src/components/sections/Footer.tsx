@@ -55,7 +55,7 @@ export default function Footer() {
                 />
               </span>
               <span className="flex flex-col leading-none">
-                <span className="font-display text-2xl text-text-primary">
+                <span className="font-display text-2xl text-purple">
                   506
                 </span>
                 <span className="font-brush text-xl leading-none text-purple -mt-1">
