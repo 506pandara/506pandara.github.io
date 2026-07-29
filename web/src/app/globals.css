@@ -12,6 +12,7 @@
   --green: #2e6b2e;
   --green-deep: #1f4a1f;
   --green-light: #a8d68f;
+  --green-vine: #79ad50;
 
   --lavender: #e6d7f5;
 
@@ -36,6 +37,7 @@
   --color-green: var(--green);
   --color-green-deep: var(--green-deep);
   --color-green-light: var(--green-light);
+  --color-green-vine: var(--green-vine);
   --color-lavender: var(--lavender);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
