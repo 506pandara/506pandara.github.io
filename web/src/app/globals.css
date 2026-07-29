@@ -2,18 +2,18 @@
 
 :root {
   --bg: #e7f0d8;
-  --bg-elevated: #f2f1de;
-  --bg-card: #f2f1de;
+  --bg-elevated: #d6e6b3;
+  --bg-card: #d6e6b3;
 
   --purple: #6a0dad;
-  --purple-deep: #efe3f8;
+  --purple-deep: #ddc2f2;
   --purple-text: #6a0dad;
 
   --green: #375c1d;
   --green-deep: #24400f;
   --green-light: #b9d194;
 
-  --lavender: #efe3f8;
+  --lavender: #ddc2f2;
 
   --text-primary: #212f1a;
   --text-secondary: #47543c;
