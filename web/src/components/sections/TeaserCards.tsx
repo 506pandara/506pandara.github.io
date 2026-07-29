@@ -17,8 +17,7 @@ export default function TeaserCards() {
               className="group relative flex flex-col overflow-hidden rounded-2xl border p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1"
               style={{
                 borderColor: "var(--border-purple)",
-                background:
-                  "radial-gradient(120% 100% at 0% 0%, var(--purple-deep) 0%, var(--bg-card) 55%)",
+                background: "var(--bg-card)",
               }}
             >
               <Icon
