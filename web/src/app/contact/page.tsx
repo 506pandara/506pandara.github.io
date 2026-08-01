@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Mail, MapPin, Shield } from "lucide-react";
 import Navbar from "@/components/sections/Navbar";
+import BambooSide from "@/components/ui/BambooSide";
 import Footer from "@/components/sections/Footer";
 import PageHero from "@/components/ui/PageHero";
 import { footerContact } from "@/lib/data";
@@ -13,6 +14,7 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
+      <BambooSide />
       <main id="main-content">
         <PageHero
           eyebrow="Get In Touch"
