@@ -2,7 +2,7 @@ import { homeAbout } from "@/lib/data";
 
 export default function AboutCard() {
   return (
-    <div className="card about">
+    <div className="card about" id="about">
       <span className="no">02 / ABOUT</span>
       <div className="cap k">{homeAbout.heading}</div>
       <p>{homeAbout.body}</p>

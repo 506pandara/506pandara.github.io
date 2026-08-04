@@ -258,10 +258,10 @@ export const footerSponsors = {
 // ---------------------------------------------------------------------------
 
 export const homeNavLinks = [
-  { label: "About us", href: "#" },
-  { label: "The robot", href: "#" },
-  { label: "Outreach", href: "#" },
-  { label: "Sponsors", href: "sponsors.html" },
+  { label: "About us", href: "#about" },
+  { label: "The robot", href: "/our-robot/" },
+  { label: "Outreach", href: "/outreach/" },
+  { label: "Sponsors", href: "/sponsor-us/" },
 ];
 
 export const homeMeta = [
@@ -283,7 +283,7 @@ export const homeAbout = {
   heading: "About",
   body: "Trophies are fun, but they're not the mission. Pandara exists to pull more kids, more schools, and more of our community into STEM — one robot at a time. Fourteen students, forty-six years of combined FIRST experience, and everything we learn handed straight to the next team down the line.",
   tags: ["Mentoring", "Free camps", "Advocacy", "Community"],
-  cta: { label: "See the robot", href: "#" },
+  cta: { label: "See the robot", href: "/our-robot/" },
   join: { label: "Open to", sub: "new members", href: "#" },
 };
 
@@ -317,15 +317,38 @@ export const homeThanks = {
       isOpenSlot: true,
     },
   ],
-  cta: { label: "See sponsorship tiers →", href: "sponsors.html" },
+  cta: { label: "See sponsorship tiers →", href: "/sponsor-us/" },
 };
+
+export const outreachPrograms = [
+  {
+    title: "Mentoring",
+    description:
+      "Pairing experienced members with younger students and rookie teams to pass down what we've learned season over season.",
+  },
+  {
+    title: "Free Camps",
+    description:
+      "Hands-on STEM camps and workshops open to local students at no cost, introducing them to robotics and engineering.",
+  },
+  {
+    title: "Advocacy",
+    description:
+      "Speaking up for FIRST programs in our district and community so more schools have a path into robotics.",
+  },
+  {
+    title: "Community",
+    description:
+      "Showing up at local events to demo the robot and get more of Palm Harbor excited about STEM.",
+  },
+];
 
 export const homeFoot = {
   left: "FTC Team 506 · Pandara",
   center: "Built by students",
   links: [
     { label: "GitHub", href: "#" },
-    { label: "Sponsor us", href: "sponsors.html" },
-    { label: "Contact", href: "#" },
+    { label: "Sponsor us", href: "/sponsor-us/" },
+    { label: "Contact", href: "/contact/" },
   ],
 };
