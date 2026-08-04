@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/sections/Navbar";
+import BambooSide from "@/components/ui/BambooSide";
 import Footer from "@/components/sections/Footer";
 import PageHero from "@/components/ui/PageHero";
 import { timeline } from "@/lib/data";
@@ -12,6 +13,7 @@ export default function WorldChampionshipsPage() {
   return (
     <>
       <Navbar />
+      <BambooSide />
       <main id="main-content">
         <PageHero
           eyebrow="Our History"

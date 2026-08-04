@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Anton, Bangers, Inter } from "next/font/google";
-import BambooSide from "@/components/ui/BambooSide";
 import "./globals.css";
 
 const anton = Anton({
@@ -47,7 +46,6 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <BambooSide />
         {children}
       </body>
     </html>

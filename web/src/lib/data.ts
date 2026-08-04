@@ -252,3 +252,80 @@ export const footerSponsors = {
   note: "Sponsor logos coming soon.",
   href: "/sponsor-us/",
 };
+
+// ---------------------------------------------------------------------------
+// Homepage (bamboo-forest design) content
+// ---------------------------------------------------------------------------
+
+export const homeNavLinks = [
+  { label: "About us", href: "#" },
+  { label: "The robot", href: "#" },
+  { label: "Outreach", href: "#" },
+  { label: "Sponsors", href: "sponsors.html" },
+];
+
+export const homeMeta = [
+  { key: "Program", value: "FIRST Tech Challenge" },
+  { key: "Season", value: ["BioBuzz", "2026 – 2027"] },
+  { key: "Based", value: "Palm Harbor, FL" },
+  { key: "Instagram", value: "@506Pandara" },
+];
+
+export const homeSeasonTrack = [
+  { label: "M1", title: "Meet 1", status: "next" as const },
+  { label: "M2", title: "Meet 2", status: "upcoming" as const },
+  { label: "M3", title: "Meet 3", status: "upcoming" as const },
+  { label: "ST", title: "State Championship", status: "upcoming" as const },
+  { label: "WC", title: "World Championship", status: "upcoming" as const },
+];
+
+export const homeAbout = {
+  heading: "About",
+  body: "Trophies are fun, but they're not the mission. Pandara exists to pull more kids, more schools, and more of our community into STEM — one robot at a time. Fourteen students, forty-six years of combined FIRST experience, and everything we learn handed straight to the next team down the line.",
+  tags: ["Mentoring", "Free camps", "Advocacy", "Community"],
+  cta: { label: "See the robot", href: "#" },
+  join: { label: "Open to", sub: "new members", href: "#" },
+};
+
+export const homeThanks = {
+  heading: "Nothing on this robot was bought by us.",
+  body: "Every plate, motor and plane ticket came from someone who believed fourteen students could pull it off. Here is exactly what they gave.",
+  list: [
+    {
+      name: "EMW Laser",
+      note: "12 custom laser-cut aluminum plates, and the shop visits where we learned to design for manufacturing",
+    },
+    {
+      name: "Follow Through Laser Cutting",
+      note: "The metal plates this season's robot is built from",
+    },
+    {
+      name: "RTX",
+      note: "Engineers who reviewed our designs, and the mentors who kept us honest",
+    },
+    {
+      name: "Polymaker",
+      note: "The printing material behind every custom part on the machine",
+    },
+    {
+      name: "Palm Harbor University High School",
+      note: "A shop to build in and a place to teach from",
+    },
+    {
+      name: "Your name here",
+      note: "There is still room on the turret ring",
+      isOpenSlot: true,
+    },
+  ],
+  cta: { label: "See sponsorship tiers →", href: "sponsors.html" },
+};
+
+export const homeFoot = {
+  left: "FTC Team 506 · Pandara",
+  center: "Built by students",
+  links: [
+    { label: "GitHub", href: "#" },
+    { label: "Sponsor us", href: "sponsors.html" },
+    { label: "Contact", href: "#" },
+  ],
+};
