@@ -7,9 +7,9 @@ export default function FeatureCards() {
   const { team, sponsor } = featureCards;
 
   return (
-    <section className="relative px-6 pb-24 pt-10 md:px-10 lg:px-14">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-8 lg:grid-cols-[3fr_2fr]">
-        <div className="chamfer btn-green-gradient relative flex min-h-[340px] flex-col overflow-hidden shadow-[var(--shadow-card)] sm:flex-row">
+    <section className="relative px-4 pb-10 pt-6 md:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr]">
+        <div className="btn-green-gradient relative flex min-h-[340px] flex-col overflow-hidden rounded-[24px_96px_24px_24px] shadow-[var(--shadow-card)] sm:flex-row">
           <div className="relative z-10 flex flex-col justify-center gap-4 p-8 sm:w-[52%] sm:p-10">
             <Users className="h-8 w-8 text-cream" strokeWidth={2} />
             <h3 className="font-display text-3xl text-cream sm:text-4xl">
@@ -37,15 +37,8 @@ export default function FeatureCards() {
           </div>
         </div>
 
-        <div className="chamfer relative min-h-[340px] overflow-hidden bg-lavender shadow-[var(--shadow-card)]">
-          <div
-            aria-hidden="true"
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(120% 100% at 100% 0%, rgba(110,40,184,0.15), transparent 60%)",
-            }}
-          />
+        <div className="relative min-h-[340px] overflow-hidden rounded-[8px] border-2 border-purple bg-lavender shadow-[var(--shadow-card)]">
+          <div aria-hidden="true" className="bg-hatch absolute inset-0" />
           <div className="relative flex h-full flex-col justify-center gap-4 p-8 sm:p-10">
             <Handshake className="h-8 w-8 text-purple-text" strokeWidth={2} />
             <h3 className="font-display text-3xl text-purple-text sm:text-4xl">

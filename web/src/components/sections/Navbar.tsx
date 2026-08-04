@@ -13,30 +13,29 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b-2 border-green-vine bg-bg">
-      <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 md:px-10 lg:px-14">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="relative h-11 w-11 flex-none">
+    <header className="sticky top-0 z-50 bg-bg px-4 pt-4 md:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-[1400px] items-center gap-3">
+        <Link
+          href="/"
+          className="flex flex-none items-center gap-2.5 rounded-full bg-purple py-2.5 pl-3 pr-5 shadow-[var(--shadow-card)]"
+        >
+          <span className="relative h-8 w-8 flex-none overflow-hidden rounded-full ring-2 ring-cream/40">
             <Image
               src="/images/pandara-logo.webp"
               alt="Team 506 Pandara panda logo"
               fill
-              sizes="44px"
+              sizes="32px"
               className="object-contain"
               priority
             />
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-display text-2xl tracking-wide text-purple">
-              506
-            </span>
-            <span className="font-brush text-xl leading-none text-purple -mt-1">
-              PANDARA
-            </span>
+            <span className="font-display text-lg tracking-wide text-cream">506</span>
+            <span className="font-brush -mt-1 text-sm leading-none text-cream">PANDARA</span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden flex-1 items-center justify-center gap-1 rounded-full bg-ink px-3 py-3 lg:flex">
           {navLinks.map((link) => {
             const isActive =
               link.href === "/" ? pathname === "/" : pathname?.startsWith(link.href);
@@ -44,16 +43,11 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative pb-1 text-[13px] font-bold uppercase tracking-wider transition-colors ${
-                  isActive
-                    ? "text-purple"
-                    : "text-text-primary hover:text-purple"
+                className={`cap-label rounded-full px-4 py-1.5 transition-colors ${
+                  isActive ? "bg-green text-cream" : "text-cream/80 hover:text-cream"
                 }`}
               >
                 {link.label}
-                {isActive ? (
-                  <span className="absolute inset-x-0 -bottom-0.5 h-[2px] bg-purple" />
-                ) : null}
               </Link>
             );
           })}
@@ -64,9 +58,9 @@ export default function Navbar() {
           aria-label="Toggle navigation menu"
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
-          className="text-text-primary lg:hidden"
+          className="flex h-11 w-12 flex-none items-center justify-center rounded-xl bg-green-light text-ink lg:hidden"
         >
-          {mobileOpen ? <X size={26} /> : <Menu size={26} />}
+          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
@@ -77,15 +71,15 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden border-t border-ink/10 bg-bg lg:hidden"
+            className="mx-auto mt-3 max-w-[1400px] overflow-hidden rounded-3xl bg-ink lg:hidden"
           >
-            <div className="flex flex-col gap-1 px-6 py-4">
+            <div className="flex flex-col gap-1 p-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-3 py-3 text-sm font-bold uppercase tracking-wider text-text-primary transition-colors hover:bg-purple-deep hover:text-purple"
+                  className="cap-label rounded-full px-4 py-3 text-cream/80 transition-colors hover:bg-green hover:text-cream"
                 >
                   {link.label}
                 </Link>
@@ -94,6 +88,10 @@ export default function Navbar() {
           </motion.nav>
         ) : null}
       </AnimatePresence>
+
+      <div className="mx-auto max-w-[1400px] pt-4">
+        <div className="h-0.5 bg-green-vine" />
+      </div>
     </header>
   );
 }
