@@ -264,6 +264,17 @@ export const homeNavLinks = [
   { label: "Sponsors", href: "/sponsor-us/" },
 ];
 
+export const siteNavLinks = [
+  { label: "Home", href: "/" },
+  { label: "The Robot", href: "/our-robot/" },
+  { label: "World Champs", href: "/world-championships/" },
+  { label: "Rankings", href: "/rankings/" },
+  { label: "The Team", href: "/meet-the-team/" },
+  { label: "Outreach", href: "/outreach/" },
+  { label: "Sponsors", href: "/sponsor-us/" },
+  { label: "Contact", href: "/contact/" },
+];
+
 export const homeMeta = [
   { key: "Program", value: "FIRST Tech Challenge" },
   { key: "Season", value: ["BioBuzz", "2026 – 2027"] },

@@ -1,24 +1,8 @@
 import type { Metadata } from "next";
-import { Anton, Bangers, Inter } from "next/font/google";
-import "./globals.css";
-
-const anton = Anton({
-  variable: "--font-anton",
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-const bangers = Bangers({
-  variable: "--font-bangers",
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+import "./home.css";
+import HomeForest from "@/components/home/HomeForest";
+import SiteNav from "@/components/home/SiteNav";
+import SiteFooter from "@/components/home/SiteFooter";
 
 export const metadata: Metadata = {
   title: "FTC Team 506 Pandara",
@@ -35,18 +19,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${anton.variable} ${bangers.variable} ${inter.variable}`}
-    >
-      <body className="bg-bg text-text-primary antialiased">
-        <a
-          href="#main-content"
-          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[100] focus-visible:rounded-full focus-visible:bg-purple focus-visible:px-5 focus-visible:py-2.5 focus-visible:text-sm focus-visible:font-semibold focus-visible:text-white"
-        >
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font -- root layout applies to every route, not a single page */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Yuji+Syuku&family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        {children}
+        <HomeForest />
+        <div className="app">
+          <SiteNav />
+          <main id="main-content">{children}</main>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );

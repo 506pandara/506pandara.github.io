@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Navbar from "@/components/sections/Navbar";
-import BambooSide from "@/components/ui/BambooSide";
-import Footer from "@/components/sections/Footer";
-import PageHero from "@/components/ui/PageHero";
+import PageHeader from "@/components/home/PageHeader";
 import { robotSpecs } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -13,44 +9,27 @@ export const metadata: Metadata = {
 export default function OurRobotPage() {
   return (
     <>
-      <Navbar />
-      <BambooSide />
-      <main id="main-content">
-        <PageHero
-          eyebrow="Engineering"
-          title="Our Robot"
-          subtitle="Built with precision. Driven by purpose."
-        />
-        <section className="px-6 pb-20 md:px-10 lg:px-14">
-          <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-10 lg:grid-cols-2">
-            <div className="relative aspect-square overflow-hidden rounded-2xl border border-ink/10 bg-bg-card shadow-[var(--shadow-card)]">
-              <Image
-                src="/images/robot-picture.webp"
-                alt="Team 506 Pandara's competition robot"
-                fill
-                sizes="(min-width: 1024px) 600px, 100vw"
-                className="mix-blend-multiply object-contain p-8"
-              />
-            </div>
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-              {robotSpecs.map((spec) => (
-                <div
-                  key={spec.label}
-                  className="rounded-2xl border border-ink/10 bg-bg-card shadow-[var(--shadow-card)] p-6 transition-colors hover:border-green/50"
-                >
-                  <span className="text-xs font-bold uppercase tracking-wider text-text-muted">
-                    {spec.label}
-                  </span>
-                  <p className="mt-2 font-display text-xl text-text-primary">
-                    {spec.value}
-                  </p>
-                </div>
-              ))}
-            </div>
+      <PageHeader
+        eyebrow="Engineering"
+        title="Our Robot"
+        subtitle="Built with precision. Driven by purpose."
+      />
+      <div style={{ padding: "10px 14px 6px" }}>
+        <div className="grid" style={{ gridTemplateColumns: "1fr 1fr", alignItems: "center" }}>
+          <div className="card hero-card" style={{ minHeight: 360 }}>
+            <span className="no">ROBOT</span>
+            <div className="bot" />
           </div>
-        </section>
-      </main>
-      <Footer />
+          <div className="stats" style={{ gridTemplateColumns: "1fr 1fr" }}>
+            {robotSpecs.map((spec) => (
+              <div key={spec.label} className="card plain">
+                <div className="cap">{spec.label}</div>
+                <h3>{spec.value}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   );
 }
