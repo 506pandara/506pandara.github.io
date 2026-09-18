@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
-import { InstagramIcon, YoutubeIcon, FacebookIcon } from "@/components/ui/SocialIcons";
+import { InstagramIcon, YoutubeIcon } from "@/components/ui/SocialIcons";
 import { siteNavLinks, footerTagline, footerContact, footerSocials, homeFoot } from "@/lib/data";
 
 const socialIcons = {
   Instagram: InstagramIcon,
   Youtube: YoutubeIcon,
-  Facebook: FacebookIcon,
   Mail,
 };
 

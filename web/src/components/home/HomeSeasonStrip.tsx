@@ -99,24 +99,6 @@ export default function HomeSeasonStrip() {
     return () => cleanups.forEach((fn) => fn());
   }, []);
 
-  // palette theme toggle, persisted to localStorage
-  useEffect(() => {
-    const b = document.getElementById("themebtn");
-    const r = document.documentElement;
-    if (!b) return;
-    try {
-      if (localStorage.getItem("pandara-palette") === "alt") r.classList.add("alt");
-    } catch {}
-    const onClick = () => {
-      const on = r.classList.toggle("alt");
-      try {
-        localStorage.setItem("pandara-palette", on ? "alt" : "base");
-      } catch {}
-    };
-    b.addEventListener("click", onClick);
-    return () => b.removeEventListener("click", onClick);
-  }, []);
-
   return (
     <div className="strip">
       <span className="badge balls">
@@ -131,9 +113,6 @@ export default function HomeSeasonStrip() {
         竹<span>Bamboo</span>
       </span>
       <span className="right">
-        <button className="badge tbtn" id="themebtn" type="button" aria-label="Swap palette" title="Swap palette">
-          <b></b>
-        </button>
         <span className="trk">
           <span className="lb">Season</span>
           {homeSeasonTrack.map((m) => (

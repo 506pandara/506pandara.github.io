@@ -3,15 +3,15 @@ import PageHeader from "@/components/home/PageHeader";
 import { timeline } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "World Championships — 506 Pandara",
+  title: "Legacy — 506 Pandara",
 };
 
-export default function WorldChampionshipsPage() {
+export default function LegacyPage() {
   return (
     <>
       <PageHeader
         eyebrow="Our History"
-        title="World Championships"
+        title="Legacy"
         subtitle="Our journey to the world's biggest stage."
       />
       <ol className="timeline">

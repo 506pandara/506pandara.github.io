@@ -1,7 +1,7 @@
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Our Robot", href: "/our-robot/" },
-  { label: "World Championships", href: "/world-championships/" },
+  { label: "Legacy", href: "/legacy/" },
   { label: "Rankings", href: "/rankings/" },
   { label: "Meet The Team", href: "/meet-the-team/" },
   { label: "Sponsor Us", href: "/sponsor-us/" },
@@ -20,11 +20,11 @@ export const heroContent = {
 export const teaserCards = [
   {
     icon: "Trophy",
-    title: "World Championships",
+    title: "Legacy",
     description:
       "Our journey to the world stage. Check back for updates on our next championship appearance!",
     button: "Stay Tuned",
-    href: "/world-championships/",
+    href: "/legacy/",
     accent: "purple",
   },
   {
@@ -96,10 +96,10 @@ export const timeline = [
       "Pandara qualified for the FIRST Tech Challenge World Championship, finished 7th in our division, and won 1st Place Think Award for our engineering notebook.",
   },
   {
-    year: "Current Season",
-    title: "Gearing Up for BIOBUZZ",
+    year: "Right Now",
+    title: "Preparing for BIOBUZZ",
     description:
-      "We're preparing our next robot for BIOBUZZ presented by RTX, the 2026–2027 FIRST Tech Challenge season.",
+      "Our 2026–2027 season, BIOBUZZ presented by RTX, hasn't started yet — everything above is from last season, DECODE presented by RTX. We're in the shop right now designing and building our next robot for BIOBUZZ.",
   },
 ];
 
@@ -110,36 +110,39 @@ export const robotSpecs = [
   { label: "Autonomous", value: "Limelight Vision-Guided" },
 ];
 
+export const rankingsNotice =
+  "Our BIOBUZZ season hasn't started yet — every ranking and accomplishment below is from last season, DECODE presented by RTX. We're in the shop right now preparing our robot for BIOBUZZ.";
+
 export const achievements = [
   {
     label: "World Ranking",
     value: "7th",
-    subtitle: "Division Finish · FIRST World Championship",
+    subtitle: "Division Finish · FIRST World Championship (DECODE season)",
   },
   {
     label: "State Ranking",
     value: "#1 Seed",
-    subtitle: "Alliance Captain · Florida State Championship",
+    subtitle: "Alliance Captain · Florida State Championship (DECODE season)",
   },
   {
     label: "League Ranking",
-    value: "TBD",
-    subtitle: "Updates as qualifiers are completed",
+    value: "—",
+    subtitle: "BIOBUZZ hasn't started — check back once qualifiers begin",
   },
   {
     label: "OPR",
-    value: "TBD",
-    subtitle: "Calculated after our first qualifier",
+    value: "—",
+    subtitle: "Not yet available — season hasn't started",
   },
   {
     label: "Wins",
-    value: "TBD",
-    subtitle: "Match record updates throughout the season",
+    value: "—",
+    subtitle: "Season hasn't started",
   },
   {
     label: "Awards",
     value: "1st Place",
-    subtitle: "Think Award · FIRST World Championship",
+    subtitle: "Think Award · FIRST World Championship (DECODE season)",
   },
 ];
 
@@ -236,16 +239,15 @@ export const footerNav = navLinks;
 export const footerTagline = "Building tomorrow, together.";
 
 export const footerContact = {
-  email: "contact@506pandara.org",
+  email: "506pandaraftc@gmail.com",
   location: "Clearwater, Florida",
-  program: "FIRST® Robotics Competition Team 506",
+  program: "FIRST® Tech Challenge Team 506",
 };
 
 export const footerSocials = [
-  { label: "Instagram", icon: "Instagram", href: "#" },
-  { label: "YouTube", icon: "Youtube", href: "#" },
-  { label: "Facebook", icon: "Facebook", href: "#" },
-  { label: "Email", icon: "Mail", href: "mailto:contact@506pandara.org" },
+  { label: "Instagram", icon: "Instagram", href: "https://www.instagram.com/506pandara/" },
+  { label: "YouTube", icon: "Youtube", href: "https://www.youtube.com/@Pandara506/videos" },
+  { label: "Email", icon: "Mail", href: "mailto:506pandaraftc@gmail.com" },
 ];
 
 export const footerSponsors = {
@@ -267,7 +269,7 @@ export const homeNavLinks = [
 export const siteNavLinks = [
   { label: "Home", href: "/" },
   { label: "The Robot", href: "/our-robot/" },
-  { label: "World Champs", href: "/world-championships/" },
+  { label: "Legacy", href: "/legacy/" },
   { label: "Rankings", href: "/rankings/" },
   { label: "The Team", href: "/meet-the-team/" },
   { label: "Outreach", href: "/outreach/" },
@@ -277,7 +279,7 @@ export const siteNavLinks = [
 
 export const homeMeta = [
   { key: "Program", value: "FIRST Tech Challenge" },
-  { key: "Season", value: ["BioBuzz", "2026 – 2027"] },
+  { key: "Season", value: ["BIOBUZZ", "2026 – 2027"] },
   { key: "Based", value: "Palm Harbor, FL" },
   { key: "Instagram", value: "@506Pandara" },
 ];
@@ -358,7 +360,6 @@ export const homeFoot = {
   left: "FTC Team 506 · Pandara",
   center: "Built by students",
   links: [
-    { label: "GitHub", href: "#" },
     { label: "Sponsor us", href: "/sponsor-us/" },
     { label: "Contact", href: "/contact/" },
   ],
