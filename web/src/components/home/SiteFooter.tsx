@@ -22,8 +22,14 @@ export default function SiteFooter() {
           <div className="sitefoot-social">
             {footerSocials.map((social) => {
               const Icon = socialIcons[social.icon as keyof typeof socialIcons];
+              const isExternal = social.href.startsWith("http");
               return (
-                <a key={social.label} href={social.href} aria-label={social.label}>
+                <a
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                >
                   <Icon size={14} strokeWidth={2.5} />
                 </a>
               );
