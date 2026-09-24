@@ -215,8 +215,12 @@ export const bioBuzz3D = {
   status: "In Development",
   subtitle: "A 3D realistic driving simulator, built by 506 Pandara for the FTC 2026–2027 BIOBUZZ season.",
   body: "We're building a realistic 3D simulator so drivers can practice on the BIOBUZZ field before the robot is even finished. It's open source and in active development — the code lives on GitHub.",
-  cta: "View on GitHub",
+  downloadCta: "Download for Windows",
+  downloadNote: "Windows only, via GitHub",
   repoHref: "https://github.com/akashpai0/BioBuzz-3D",
+  playCta: "Play in Browser",
+  playNote: "Any device — ~40 MB, give it a moment to load",
+  playHref: "/play/",
 };
 
 export const sponsorBenefits = [

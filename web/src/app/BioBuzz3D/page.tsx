@@ -20,15 +20,38 @@ export default function BioBuzz3DPage() {
             {bioBuzz3D.status}
           </span>
           <p>{bioBuzz3D.body}</p>
-          <a
-            className="pillbtn"
-            href={bioBuzz3D.repoHref}
-            target="_blank"
-            rel="noopener"
-            style={{ flex: "none", padding: "16px 30px", marginTop: 18 }}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              gap: 20,
+              marginTop: 18,
+            }}
           >
-            {bioBuzz3D.cta}
-          </a>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
+              <a
+                className="pillbtn"
+                href={bioBuzz3D.playHref}
+                style={{ flex: "none", padding: "16px 30px" }}
+              >
+                {bioBuzz3D.playCta}
+              </a>
+              <span style={{ fontSize: 11, color: "var(--muted)" }}>{bioBuzz3D.playNote}</span>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
+              <a
+                className="pillbtn"
+                href={bioBuzz3D.repoHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ flex: "none", padding: "16px 30px" }}
+              >
+                {bioBuzz3D.downloadCta}
+              </a>
+              <span style={{ fontSize: 11, color: "var(--muted)" }}>{bioBuzz3D.downloadNote}</span>
+            </div>
+          </div>
         </div>
       </div>
     </>
