@@ -17,16 +17,6 @@ export default function SiteNav() {
     <div className="nav">
       <Link className="mark" href="/" aria-label="506 Pandara home" />
       <span className="logo">506</span>
-      <div className="navbar">
-        {siteNavLinks.map((link) => {
-          const isActive = link.href === "/" ? pathname === "/" : pathname?.startsWith(link.href);
-          return (
-            <Link key={link.href} href={link.href} className={isActive ? "on" : undefined}>
-              {link.label}
-            </Link>
-          );
-        })}
-      </div>
       <button
         type="button"
         className={`burger${open ? " open" : ""}`}
@@ -38,7 +28,7 @@ export default function SiteNav() {
         <s></s>
         <s></s>
       </button>
-      <div className={`mobile-menu${open ? " open" : ""}`}>
+      <div className={`nav-menu${open ? " open" : ""}`}>
         {siteNavLinks.map((link) => {
           const isActive = link.href === "/" ? pathname === "/" : pathname?.startsWith(link.href);
           return (

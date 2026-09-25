@@ -224,7 +224,7 @@ export const team: TeamMember[] = [
     name: "Destin Vo",
     role: "CAD & Software",
     bio: "Splits time between CAD modeling and the robot's control software.",
-    category: "CAD",
+    category: "Software",
   },
   {
     name: "Omar Beltran",
@@ -293,7 +293,7 @@ export const footerTagline = "Building tomorrow, together.";
 
 export const footerContact = {
   email: "506pandaraftc@gmail.com",
-  location: "Clearwater, Florida",
+  location: "Palm Harbor, Florida",
   program: "FIRST® Tech Challenge Team 506",
 };
 
