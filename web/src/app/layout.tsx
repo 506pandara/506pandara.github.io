@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./home.css";
 import HomeForest from "@/components/home/HomeForest";
 import SiteNav from "@/components/home/SiteNav";
@@ -43,6 +44,12 @@ export default function RootLayout({
           <main id="main-content">{children}</main>
           <SiteFooter />
         </div>
+        <Script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          strategy="afterInteractive"
+          data-cf-beacon='{"token": "147ecbebeeb645f9b4aa50984b9645c1"}'
+        />
       </body>
     </html>
   );
