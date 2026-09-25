@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/home/PageHeader";
-import { achievements, rankingsNotice } from "@/lib/data";
+import LiveRankings from "@/components/home/LiveRankings";
+import { rankingsNotice } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Rankings — 506 Pandara",
@@ -16,17 +17,15 @@ export default function RankingsPage() {
       />
       <div style={{ padding: "10px 14px 40px" }}>
         <div className="card plain" style={{ marginBottom: 16 }}>
-          <p style={{ margin: 0 }}>{rankingsNotice}</p>
+          <p style={{ margin: 0 }}>
+            {rankingsNotice} Numbers below update automatically from{" "}
+            <a href="https://ftcscout.org/teams/506" target="_blank" rel="noopener noreferrer">
+              FTC Scout
+            </a>
+            .
+          </p>
         </div>
-        <div className="grid" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
-          {achievements.map((item) => (
-            <div key={item.label} className="card plain">
-              <div className="cap">{item.label}</div>
-              <h3 style={{ fontSize: 26, marginTop: 4 }}>{item.value}</h3>
-              <p>{item.subtitle}</p>
-            </div>
-          ))}
-        </div>
+        <LiveRankings />
       </div>
     </>
   );

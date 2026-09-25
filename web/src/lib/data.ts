@@ -84,14 +84,14 @@ export const timeline = [
       "Season after season, Pandara built out its engineering process, mentorship pipeline, and competition record across Florida events.",
   },
   {
-    year: "State Championship",
-    title: "#1 Seed Alliance Captain",
+    year: "2025–26 · DECODE",
+    title: "State Championship",
     description:
-      "Pandara earned the #1 seed at the Florida FTC State Championship and made the first alliance selection pick of the playoffs.",
+      "Pandara competed at the Florida FTC State Championship and made the alliance selection playoffs.",
   },
   {
-    year: "World Championship",
-    title: "7th in Division + Think Award",
+    year: "2025–26 · DECODE",
+    title: "World Championship + Think Award",
     description:
       "Pandara qualified for the FIRST Tech Challenge World Championship, finished 7th in our division, and won 1st Place Think Award for our engineering notebook.",
   },
@@ -103,11 +103,14 @@ export const timeline = [
   },
 ];
 
+export const robotNotice =
+  "This is last season's robot, built for DECODE presented by RTX (2025–26). Our BIOBUZZ robot is currently in design — check back once it's built.";
+
 export const robotSpecs = [
   { label: "Drive Train", value: "Custom Mecanum Drivetrain" },
   { label: "Weight", value: "~38 lbs" },
   { label: "Programming", value: "Java · FTC SDK" },
-  { label: "Autonomous", value: "Limelight Vision-Guided" },
+  { label: "Autonomous", value: "Odometry-Based Autonomous" },
 ];
 
 export const rankingsNotice =
@@ -150,63 +153,136 @@ export type TeamMember = {
   name: string;
   role: string;
   bio: string;
+  category: string;
   placeholder?: boolean;
 };
+
+export const teamCategories = ["Leadership", "Hardware", "CAD", "Software", "Portfolio & Outreach", "Open Roles"];
 
 export const team: TeamMember[] = [
   {
     name: "Julian Szymkowiak-Larsen",
     role: "Captain",
     bio: "Leads team strategy, alliance selection, and event-day operations.",
+    category: "Leadership",
   },
   {
     name: "Akash Pai",
     role: "Lead Software",
     bio: "Architects the robot's control systems, autonomous routines, and vision pipeline.",
+    category: "Leadership",
   },
   {
-    name: "Pranav Manthena",
+    name: "Connor Pang",
     role: "Lead Hardware",
     bio: "Owns the drivetrain, mechanisms, and electrical systems on the robot.",
+    category: "Leadership",
   },
   {
     name: "Henry Nyguen",
     role: "Lead CAD",
     bio: "Designs and models every mechanism before it's machined and assembled.",
+    category: "Leadership",
   },
   {
     name: "Samuel Crockett",
     role: "Lead Outreach",
     bio: "Runs our community STEM events and sponsor relationships.",
+    category: "Leadership",
+  },
+  {
+    name: "Pranav Manthena",
+    role: "Hardware",
+    bio: "Builds and maintains mechanisms alongside the hardware team.",
+    category: "Hardware",
+  },
+  {
+    name: "Andrew Grozin",
+    role: "Hardware",
+    bio: "Assembles and maintains the robot's drivetrain and mechanisms.",
+    category: "Hardware",
+  },
+  {
+    name: "Gavin Guerrieri",
+    role: "Hardware",
+    bio: "Builds and iterates on the robot's mechanisms on the shop floor.",
+    category: "Hardware",
+  },
+  {
+    name: "Chris Liu",
+    role: "CAD & Hardware",
+    bio: "Models mechanisms in CAD, then helps bring them to life on the robot.",
+    category: "CAD",
+  },
+  {
+    name: "Adriana Anastasova",
+    role: "CAD",
+    bio: "Designs and models robot mechanisms ahead of fabrication.",
+    category: "CAD",
+  },
+  {
+    name: "Destin Vo",
+    role: "CAD & Software",
+    bio: "Splits time between CAD modeling and the robot's control software.",
+    category: "CAD",
+  },
+  {
+    name: "Omar Beltran",
+    role: "CAD",
+    bio: "Designs and models robot subsystems in CAD.",
+    category: "CAD",
+  },
+  {
+    name: "Sriram Nannapaneni",
+    role: "Software",
+    bio: "Writes and tests code for the robot's control systems.",
+    category: "Software",
+  },
+  {
+    name: "Stella Dye",
+    role: "Portfolio & Software",
+    bio: "Documents the team's engineering process and contributes to the codebase.",
+    category: "Software",
+  },
+  {
+    name: "Erica Lily",
+    role: "Portfolio & Outreach",
+    bio: "Tells the team's story through the engineering portfolio and community events.",
+    category: "Portfolio & Outreach",
   },
   {
     name: "President",
     role: "President",
     bio: "Name coming soon.",
+    category: "Open Roles",
     placeholder: true,
   },
   {
     name: "Business Lead",
     role: "Business",
     bio: "Name coming soon.",
+    category: "Open Roles",
     placeholder: true,
   },
   {
     name: "Driver",
     role: "Driver",
     bio: "Name coming soon.",
+    category: "Open Roles",
     placeholder: true,
   },
   {
     name: "Human Player",
     role: "Human Player",
     bio: "Name coming soon.",
+    category: "Open Roles",
     placeholder: true,
   },
   {
     name: "Mentor",
     role: "Mentor",
     bio: "Name coming soon.",
+    category: "Open Roles",
     placeholder: true,
   },
 ];

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/home/PageHeader";
-import { team } from "@/lib/data";
+import { team, teamCategories } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Meet The Team — 506 Pandara",
@@ -24,16 +24,27 @@ export default function MeetTheTeamPage() {
         subtitle="Get to know the students, mentors, and leaders behind 506 Pandara."
       />
       <div style={{ padding: "10px 14px 40px" }}>
-        <div className="grid" style={{ gridTemplateColumns: "repeat(5,1fr)" }}>
-          {team.map((member) => (
-            <div key={member.name} className={`member${member.placeholder ? " open" : ""}`}>
-              <div className="av">{initials(member.name)}</div>
-              <h3>{member.placeholder ? member.role : member.name}</h3>
-              <div className="role">{member.placeholder ? "Position Open" : member.role}</div>
-              <p>{member.bio}</p>
+        {teamCategories.map((category) => {
+          const members = team.filter((member) => member.category === category);
+          if (members.length === 0) return null;
+          return (
+            <div key={category} style={{ marginTop: 28 }}>
+              <h2 className="cap" style={{ color: "var(--plum)", marginBottom: 12 }}>
+                {category}
+              </h2>
+              <div className="grid cols-5">
+                {members.map((member) => (
+                  <div key={member.name} className={`member${member.placeholder ? " open" : ""}`}>
+                    <div className="av">{initials(member.name)}</div>
+                    <h3>{member.placeholder ? member.role : member.name}</h3>
+                    <div className="role">{member.placeholder ? "Position Open" : member.role}</div>
+                    <p>{member.bio}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </>
   );

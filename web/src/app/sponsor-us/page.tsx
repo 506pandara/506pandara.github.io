@@ -15,8 +15,8 @@ export default function SponsorUsPage() {
         subtitle="Partner with us to inspire the next generation and fuel innovation."
       />
       <div style={{ padding: "10px 14px 40px" }}>
-        <div className="grid" style={{ gridTemplateColumns: "1.35fr .65fr", alignItems: "center" }}>
-          <div className="grid" style={{ gridTemplateColumns: "1fr 1fr" }}>
+        <div className="grid cols-sponsor">
+          <div className="grid cols-2">
             {sponsorBenefits.map((benefit) => (
               <div key={benefit.title} className="card plain">
                 <h3>{benefit.title}</h3>
