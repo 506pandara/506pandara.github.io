@@ -157,7 +157,7 @@ export type TeamMember = {
   placeholder?: boolean;
 };
 
-export const teamCategories = ["Leadership", "Hardware", "CAD", "Software", "Portfolio & Outreach", "Open Roles"];
+export const teamCategories = ["Leadership", "Hardware", "CAD", "Software", "Portfolio & Outreach"];
 
 export const team: TeamMember[] = [
   {
@@ -169,13 +169,13 @@ export const team: TeamMember[] = [
   {
     name: "Akash Pai",
     role: "Lead Software",
-    bio: "Architects the robot's control systems, autonomous routines, and vision pipeline.",
+    bio: "Architects the robot's control systems, autonomous routines, and vision pipeline. Also serves as President of the PHUHS Robotics Club.",
     category: "Leadership",
   },
   {
     name: "Connor Pang",
     role: "Lead Hardware",
-    bio: "Owns the drivetrain, mechanisms, and electrical systems on the robot.",
+    bio: "Owns the drivetrain, mechanisms, and electrical systems on the robot. Also serves as Vice President of the PHUHS Robotics Club.",
     category: "Leadership",
   },
   {
@@ -242,48 +242,13 @@ export const team: TeamMember[] = [
     name: "Stella Dye",
     role: "Portfolio & Software",
     bio: "Documents the team's engineering process and contributes to the codebase.",
-    category: "Software",
+    category: "Portfolio & Outreach",
   },
   {
     name: "Erica Lily",
     role: "Portfolio & Outreach",
     bio: "Tells the team's story through the engineering portfolio and community events.",
     category: "Portfolio & Outreach",
-  },
-  {
-    name: "President",
-    role: "President",
-    bio: "Name coming soon.",
-    category: "Open Roles",
-    placeholder: true,
-  },
-  {
-    name: "Business Lead",
-    role: "Business",
-    bio: "Name coming soon.",
-    category: "Open Roles",
-    placeholder: true,
-  },
-  {
-    name: "Driver",
-    role: "Driver",
-    bio: "Name coming soon.",
-    category: "Open Roles",
-    placeholder: true,
-  },
-  {
-    name: "Human Player",
-    role: "Human Player",
-    bio: "Name coming soon.",
-    category: "Open Roles",
-    placeholder: true,
-  },
-  {
-    name: "Mentor",
-    role: "Mentor",
-    bio: "Name coming soon.",
-    category: "Open Roles",
-    placeholder: true,
   },
 ];
 
